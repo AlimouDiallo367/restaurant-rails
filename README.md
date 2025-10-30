@@ -1,1 +1,1 @@
-# restaurant-rails
+# Restaurant - Lab3  
