@@ -11,4 +11,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  
+  # Page publique / 
+  root "home#index"
+  get "/businesses/:id", to: "businesses#show", as: :business
+
+  namespace :admin do
+    root "home#index" 
+    get "/businesses/:id", to: "businesses#show", as: :business 
+  end
 end

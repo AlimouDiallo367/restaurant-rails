@@ -1,0 +1,28 @@
+<h1><%= @business.name %></h1>
+<strong>Description: </strong>
+<%= @business.description %>
+<br/>
+<strong>Site web: </strong>
+<%= @business.site_web %>
+<br/>
+<ul>
+  <% @business.menus.each do |menu| %>
+    <li>
+      <%= menu.title %>
+      <ul>
+        <% menu.menus.each do |menu| %>
+          <li>
+            <%= menu.title %>
+            <ul>
+              <% menu.items.each do |i| %>
+                <li>
+                  <%= i.name %>
+                </li> 
+              <% end %>
+            </ul>
+          </li> 
+        <% end %>
+      </ul>  
+    </li>       
+  <% end %>  
+</ul>
